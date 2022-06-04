@@ -40,8 +40,11 @@ function ConvertHandler() {
         result = str.charAt(0).toUpperCase() + str.slice(1);
         break;
     }*/
-
-    return this.getReturnUnit(result) ? String(result).toLowerCase() : null;
+    result = String(result).toLowerCase();
+    if (result === "l") {
+      result = "L";
+    }
+    return this.getReturnUnit(result) ? result : null;
   };
 
   this.getReturnUnit = function (initUnit) {
