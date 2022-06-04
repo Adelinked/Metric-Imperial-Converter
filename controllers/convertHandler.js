@@ -29,7 +29,7 @@ function ConvertHandler() {
   };
 
   this.getUnit = function (input) {
-    const LetEndRegex = /\D+$/gi;
+    const LetEndRegex = /[a-z]+$/gi;
     let result = input.match(LetEndRegex);
 
     /* const str = String(result).toLowerCase();
