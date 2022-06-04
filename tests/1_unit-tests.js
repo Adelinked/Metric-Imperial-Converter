@@ -51,7 +51,9 @@ suite("Unit Tests", function () {
         "KG",
       ];
       input.forEach((u) => {
-        assert.equal(convertHandler.getUnit(u), u.toLowerCase());
+        u === "l" || u === "L"
+          ? assert.equal(convertHandler.getUnit(u), "L")
+          : assert.equal(convertHandler.getUnit(u), u.toLowerCase());
       });
     });
     test("should correctly return an error for an invalid input unit.", () => {
@@ -63,7 +65,7 @@ suite("Unit Tests", function () {
   suite("Function convertHandler.getReturnUnit(initUnit)", () => {
     test("should return the correct return unit for each valid input unit.", () => {
       const input = ["gal", "l", "lbs", "kg", "mi", "km"];
-      const expected = ["L", "gal", "Kg", "lbs", "Km", "mi"];
+      const expected = ["L", "gal", "kg", "lbs", "km", "mi"];
       input.forEach((u, index) =>
         assert.equal(convertHandler.getReturnUnit(u), expected[index])
       );
