@@ -19,7 +19,7 @@ module.exports = function (app) {
       const toString = convertHandler.getString(
         initNum,
         initUnit,
-        returnNum,
+        Number(returnNum.toFixed(5)),
         returnUnit
       );
       res.json(toString);
