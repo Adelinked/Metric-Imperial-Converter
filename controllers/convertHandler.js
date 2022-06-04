@@ -54,13 +54,13 @@ function ConvertHandler() {
         result = "gal";
         break;
       case "lbs":
-        result = "Kg";
+        result = "kg";
         break;
       case "kg":
         result = "lbs";
         break;
       case "mi":
-        result = "Km";
+        result = "km";
         break;
       case "km":
         result = "mi";
