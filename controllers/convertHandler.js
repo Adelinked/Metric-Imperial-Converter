@@ -2,7 +2,7 @@ const res = require("express/lib/response");
 
 function ConvertHandler() {
   this.getNum = function (input) {
-    const numBeginRegex = /^\d+(\.){0,1}\d*(\/){0,1}\d*/g;
+    const numBeginRegex = /^\d+(\.){0,1}\d*(\/){0,1}\d*(\.){0,1}\d*/g;
     const fracionRegex = /\//g;
     const unitRegex = /\D+$/gi;
 
